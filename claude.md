@@ -27,6 +27,8 @@ Measurement protocol:
 - Sling tare: 60g (deduct from weight_pre_bake)
 - Post-bake weighing: 1hr after removing from oven (consistent timing for bake loss %)
 
+Privacy: Public repo. Keep notes field baking-focused only (no names, locations, events). Observations like "overfermented" or "forgot to preheat" are fine.
+
 ## Sourdough Expertise
 
 **Fermentation:**

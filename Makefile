@@ -12,9 +12,10 @@ venv:  ## Create the virtual environment if it doesn't exist
 		echo "Virtual environment already exists."; \
 	fi
 
-install: venv  ## Install dependencies
+install: venv  ## Install dependencies and setup hooks
 	$(VENV_RUN); \
-	uv sync;
+	uv sync; \
+	pre-commit install;
 
 clean:  ## Remove virtual environment and artifacts
 	rm -rf .venv
@@ -29,14 +30,37 @@ new:  ## Create new loaf file (usage: make new NUM=6)
 	sed -i '' "s/date: 2026-02-04/date: $$(date +%Y-%m-%d)/" loaves/loaf-$$padded.yaml; \
 	echo "Created loaves/loaf-$$padded.yaml"
 
-calculate:  ## Calculate derived fields (usage: make calculate NUM=6)
-	@if [ -z "$(NUM)" ]; then echo "Usage: make calculate NUM=6"; exit 1; fi
-	@padded=$$(printf "%03d" $(NUM)); \
-	$(VENV_RUN); python scripts/calculate.py loaves/loaf-$$padded.yaml
+calculate:  ## Calculate derived fields (usage: make calculate [NUM=6])
+	@if [ -z "$(NUM)" ]; then \
+		$(VENV_RUN); \
+		for loaf in loaves/loaf-*.yaml; do \
+			if [ -f "$$loaf" ]; then \
+				python scripts/calculate.py "$$loaf" || exit 1; \
+			fi; \
+		done; \
+	else \
+		padded=$$(printf "%03d" $(NUM)); \
+		$(VENV_RUN); python scripts/calculate.py loaves/loaf-$$padded.yaml; \
+	fi
 
-validate:  ## Validate YAML structure (usage: make validate NUM=6)
-	@if [ -z "$(NUM)" ]; then echo "Usage: make validate NUM=6"; exit 1; fi
-	@padded=$$(printf "%03d" $(NUM)); \
-	$(VENV_RUN); python scripts/validate.py loaves/loaf-$$padded.yaml
+validate:  ## Validate YAML structure (usage: make validate [NUM=6])
+	@if [ -z "$(NUM)" ]; then \
+		$(VENV_RUN); \
+		for loaf in loaves/loaf-*.yaml; do \
+			if [ -f "$$loaf" ]; then \
+				python scripts/validate.py "$$loaf" || exit 1; \
+			fi; \
+		done; \
+	else \
+		padded=$$(printf "%03d" $(NUM)); \
+		$(VENV_RUN); python scripts/validate.py loaves/loaf-$$padded.yaml; \
+	fi
 
-.PHONY: usage venv install clean new calculate validate
+test:  ## Run test suite
+	$(VENV_RUN); pytest tests/ -v
+
+format:  ## Format code with ruff
+	$(VENV_RUN); ruff format scripts/ tests/
+	$(VENV_RUN); ruff check --fix scripts/ tests/
+
+.PHONY: usage venv install clean new calculate validate test format

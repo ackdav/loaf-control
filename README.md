@@ -7,23 +7,21 @@ Minimal sourdough baking log for tracking and analyzing loaves.
 ## Setup
 
 ```bash
-# Install dependencies
 make install
 ```
 
-## Quick Start
+## Workflow
 
 ```bash
-# Create new loaf file
+# Single loaf
 make new NUM=6
-
-# Edit loaves/loaf-006.yaml with your bake data
-
-# Calculate baker's percentages
+# Edit loaves/loaf-006.yaml
 make calculate NUM=6
-
-# Validate structure
 make validate NUM=6
+
+# Batch operations
+make calculate              # All loaves
+make validate               # All loaves
 ```
 
 ## How to Use
@@ -57,14 +55,6 @@ Compare to YOUR previous bakes, not professional bakeries:
 
 **Derived Fields:**
 `hydration_pct`, `inoculation_pct`, `salt_pct` are auto-calculated from ingredient grams.
-
-## Workflow
-
-1. `make new NUM=X` - creates loaves/loaf-XXX.yaml with today's date
-2. Fill in fields as you bake (use -1 for things you don't measure)
-3. `make calculate FILE=loaves/loaf-XXX.yaml` - auto-fill percentages
-4. `make validate FILE=loaves/loaf-XXX.yaml` - check for errors
-5. Take photos, save to photos/ folder
 
 ## Tips
 
