@@ -1,0 +1,68 @@
+# Sentinel value: -1 means "not tracked/measured" (vs 0 which means "actually zero/skipped")
+# Run `make calculate` to auto-fill derived fields (hydration_pct, inoculation_pct, etc)
+
+# QUALITY SCALE (compare to YOUR previous bakes):
+# 1 = inedible/failure
+# 2 = edible but poor (dense, gummy, or burnt)
+# 3 = acceptable daily bread
+# 4 = good, would be happy to serve guests
+# 5 = best you've made so far
+
+loaf_number: 1
+date: 2026-02-04
+
+# Derived fields (auto-calculated by make calculate)
+hydration_pct: -1  # water / total_flour * 100
+inoculation_pct: -1  # levain / total_flour * 100
+salt_pct: -1  # salt / total_flour * 100
+
+ingredients:
+  flour_half_white: 0  # halbweiss, Type 720
+  flour_dark: 0  # ruchmehl, Type 1100
+  flour_whole_grain: 0  # vollkorn, Type 1900
+  flour_rye: 0  # roggen
+  water: 0
+  salt: 0
+  levain: 0
+
+levain:
+  hours_since_feed: -1
+  ratio: "1:5:5"  # starter:flour:water
+
+process:
+  ambient_temp: 22  # room temp at start of bulk ferment (single measurement)
+  dough_temp_post_mix: -1  # optional, only if you have thermometer
+  bulk_ferment_hours: -1
+  bulk_end_state: peaked  # [underdone, good, peaked, overfermented]
+  folds: 3
+
+proof:
+  room_hours: -1  # first stage
+  room_temp: -1  # measure once at start
+  fridge_hours: -1  # second stage
+
+bake:
+  method: dutch_oven  # [dutch_oven, steam_pan, combo_cooker, open_bake]
+  temp_covered: -1
+  temp_uncovered: -1
+  covered_min: -1
+  uncovered_min: -1
+
+results:
+  weight_pre_bake: -1
+  weight_post_bake: -1
+  height_cm: -1
+  width_cm: -1
+  quality_overall: -1  # 1-5 scale, REQUIRED if you want useful data
+
+# Optional detailed ratings
+quality_detail:
+  crumb: -1  # 1-5: dense/gummy → perfect open even structure
+  crust: -1  # 1-5: pale/thick/burnt → crispy thin golden
+  taste: -1  # 1-5: off/bland → complex delicious
+
+photos:
+  crumb: ""
+  crust: ""
+
+notes: ""
