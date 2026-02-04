@@ -17,7 +17,7 @@ repos:
 
       - id: validate-loaves
         name: validate loaf YAML files
-        entry: bash -c 'source .venv/bin/activate && python scripts/validate.py'
+        entry: bash -c 'source .venv/bin/activate && python scripts/validate.py "$@"' --
         language: system
         files: ^loaves/loaf-.*\.yaml$
         pass_filenames: true

@@ -1,4 +1,4 @@
-![Loaf Control Banner](photos/loaf-control-banner.jpeg)
+![Loaf Control Banner](media/meta/banner.jpeg)
 
 # Loaf Control
 
@@ -9,6 +9,10 @@ Minimal sourdough baking log for tracking and analyzing loaves.
 ```bash
 make install
 ```
+
+## Disclaimer
+
+This project is aggressively vibe-coded for one person's kitchen and should absolutely not be used as-is. If you're brave/foolish enough to try it anyway, edit `CLAUDE.md` to match your flour types, oven setup, and local conditions. The file exists to keep Claude (the AI assistant) aligned with your baking context - treat it as your personal sourdough knowledge base.
 
 ## Workflow
 
@@ -24,18 +28,14 @@ make calculate              # All loaves
 make validate               # All loaves
 ```
 
-## How to Use
-
-**Disclaimer:** This project is aggressively vibe-coded for one person's kitchen and should absolutely not be used as-is. If you're brave/foolish enough to try it anyway, edit `CLAUDE.md` to match your flour types, oven setup, and local conditions. The file exists to keep Claude (the AI assistant) aligned with your baking context - treat it as your personal sourdough knowledge base.
-
 ## Structure
 
 ```
-loaves/          # One YAML per bake
-photos/          # Crumb and crust photos
-scripts/         # Analysis and utility scripts
-template.yaml    # Reference template
-Makefile         # Automation commands
+loaves/          # YAML logs
+media/           # Photos and assets
+scripts/         # Utilities
+template.yaml
+Makefile
 ```
 
 ## Key Concepts
@@ -63,7 +63,7 @@ Compare to YOUR previous bakes, not professional bakeries:
 - Measure ambient_temp once at bulk ferment start (better than guessing average)
 - Use bulk_end_state to capture fermentation readiness, not just time
 - Proof sequence: room first, then fridge (0 for skipped stages)
-- Take consistent photos (same lighting/angle) for future computer vision
+- Take consistent photos (same lighting/angle), save to media/loaves/
 
 ## Units
 

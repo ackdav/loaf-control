@@ -5,7 +5,8 @@ Sourdough tracking: YAML logs → correlate process with quality.
 ## Structure
 
 loaves/: loaf-NNN.yaml (one per bake)
-photos/: gitignored, for future CV
+media/loaves/: loaf photos (gitignored)
+media/meta/: project assets (banner, etc)
 scripts/: calculate.py (baker's %), validate.py
 template.yaml: master reference, sentinel defaults
 

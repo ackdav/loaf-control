@@ -153,9 +153,9 @@ cython_debug/
 # MacOS
 .DS_Store
 
-# Photos (large files, don't commit)
-photos/*
-!photos/.gitkeep
+# Media (large files, don't commit)
+media/loaves/*
+!media/loaves/.gitkeep
 !photos/loaf-control-banner.jpeg
 
 # Claude local settings

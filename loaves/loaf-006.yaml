@@ -1,0 +1,47 @@
+loaf_number: 6
+date: 2026-02-04
+hydration_pct: 68.1
+inoculation_pct: 35.7
+salt_pct: 2.35
+ingredients:
+  flour_half_white: 0
+  flour_dark: 362
+  flour_whole_grain: 0
+  flour_rye: 64
+  water: 290
+  salt: 10
+  levain: 152
+levain:
+  hours_since_feed: 12
+  ratio: '1:5:5'
+process:
+  ambient_temp: 22
+  dough_temp_post_mix: 26
+  bulk_ferment_hours: 5.6
+  bulk_end_state: good
+  folds: 3
+proof:
+  room_hours: 1.1
+  room_temp: 22
+  fridge_hours: 0
+bake:
+  method: dutch_oven
+  temp_covered: 250
+  temp_uncovered: 230
+  covered_min: 20
+  uncovered_min: 11.5
+results:
+  weight_pre_bake: 855
+  weight_post_bake: 801
+  height_cm: 9
+  width_cm: 19
+  quality_overall: 3
+quality_detail:
+  crumb: 3
+  crust: 4
+  taste: 3
+photos:
+  crumb: ''
+  crust: 'media/loaves/loaf-6-top.jpeg'
+  side: 'media/loaves/loaf-6-side.jpeg'
+notes: 'Next time: consider tracking time fully out of dutch oven (for side browning)'
