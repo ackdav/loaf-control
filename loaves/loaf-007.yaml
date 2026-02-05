@@ -1,0 +1,47 @@
+loaf_number: 7
+date: 2026-02-05
+hydration_pct: 69.7
+inoculation_pct: 36.6
+salt_pct: 2.35
+ingredients:
+  flour_half_white: 0
+  flour_dark: 305
+  flour_whole_grain: 61
+  flour_rye: 60
+  water: 297
+  salt: 10
+  levain: 156
+levain:
+  hours_since_feed: 13.3
+  ratio: '1:5:5'
+process:
+  ambient_temp: 22
+  dough_temp_post_mix: 26
+  bulk_ferment_hours: 6.0
+  bulk_end_state: peaked
+  folds: 3
+proof:
+  room_hours: 0
+  room_temp: 22
+  fridge_hours: 0.5
+bake:
+  method: dutch_oven
+  temp_covered: 250
+  temp_uncovered: 230
+  covered_min: 20
+  uncovered_min: 20
+results:
+  weight_pre_bake: 870
+  weight_post_bake: 780
+  height_cm: 10
+  width_cm: 18.5
+  quality_overall: 3
+quality_detail:
+  crumb: 3
+  crust: 4
+  taste: 3
+photos:
+  crumb: ''
+  crust: 'media/loaves/loaf-7-top.jpeg'
+  side: 'media/loaves/loaf-7-side.jpeg'
+notes: 'Oven preheat: 25min to reach 250°C, then 45min at temp before baking. After uncovered baking, added 8min with oven off (still inside). Taste a bit boring. Surprised crumb did not open more given the height - prominent ear contributed to height but crumb stayed relatively closed.'
