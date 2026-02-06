@@ -1,0 +1,52 @@
+loaf_number: 8
+date: 2026-02-06
+hydration_pct: 75.1
+inoculation_pct: 35.9
+salt_pct: 2.35
+ingredients:
+  flour_half_white: 0
+  flour_dark: 246
+  flour_whole_grain: 80
+  flour_rye: 100
+  water: 320
+  salt: 10
+  levain: 153
+levain:
+  hours_since_feed: 12.4
+  ratio: '1:5:5'
+process:
+  ambient_temp: 22
+  dough_temp_post_mix: 25
+  bulk_ferment_hours: 5.67
+  bulk_end_state: peaked
+  folds: 3
+proof:
+  room_hours: 0
+  room_temp: 22
+  fridge_hours: 0.5
+bake:
+  method: dutch_oven
+  temp_covered: 250
+  temp_uncovered: 220
+  covered_min: 22
+  uncovered_min: 18.5
+results:
+  weight_pre_bake: 849
+  weight_post_bake: 788
+  height_cm: 9.5
+  width_cm: 18.75
+  quality_overall: -1
+quality_detail:
+  crumb: -1
+  crust: -1
+  taste: -1
+photos:
+  crumb: ''
+  crust: 'media/loaves/loaf-8-top.jpeg'
+  side: 'media/loaves/loaf-8-side.jpeg'
+notes: 'Random walk experiment: 100g rye (23.5%), 80g whole grain (19%), 75% hydration.
+  Dough very sticky during mixing, different handling than wheat doughs. 3 coil folds
+  (not stretch-and-fold). Bake: 22min covered 250C, then 4min uncovered 230C, 14.5min
+  uncovered 220C (dropped temp), 8min oven-off. Used foil to protect ear which sprung
+  dramatically. Bake loss 7.2% vs loaf 7 10.3% - possibly slightly underbaked. Lighter
+  color than expected.'
